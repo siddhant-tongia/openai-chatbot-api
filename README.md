@@ -10,6 +10,7 @@ answers.
 - What an API is and how API keys work
 - How to integrate the OpenAI library
 - How conversation memory is implemented in a chatbot
+- In How to run section add one line mentioning that after quitting a history.json file will be created in the same folder.
 
 ## How to run
 
