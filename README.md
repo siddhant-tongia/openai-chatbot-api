@@ -10,6 +10,7 @@ answers.
 - What an API is and how API keys work
 - How to integrate the OpenAI library
 - How conversation memory is implemented in a chatbot
+- How to save data in a JSON file
 
 ## How to run
 
@@ -22,6 +23,8 @@ answers.
    python my_chat.py
 5. Type your question and press Enter
 6. Type `quit` to exit
+7. When you type `quit`, a history.json file will be 
+  created in the same folder with your full conversation.
 
 ## Tech used
 - Python
