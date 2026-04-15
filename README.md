@@ -30,6 +30,9 @@ interactions.
 
 ## Routes
 
+### 1. `/`
+* This is Home Route
+
 ### 1. `/chat`
 
 * Method: POST

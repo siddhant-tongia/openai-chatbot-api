@@ -17,6 +17,10 @@ client = OpenAI(
 # empty conversations dictionary
 conversations = {}
 
+@app.route("/")
+def home():
+    return "Chatbot API is running "
+
 # /chat route that accepts POST
 @app.route("/chat",methods=['POST'])
 def user_info():
@@ -66,7 +70,7 @@ def get_history(user_id):
     return jsonify({"error": "User not Found"}),404
 
 # /clear route that accepts POST
-@app.route("/clear/<user_id>",methods=['GET'])
+@app.route("/clear/<user_id>",methods=['POST'])
 def clear_history(user_id):
     if user_id in conversations:
         conversations[user_id] = []
