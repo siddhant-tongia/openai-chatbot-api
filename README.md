@@ -45,7 +45,7 @@ interactions.
 
 ### 3. `/clear/<user_id>`
 
-* Method: GET
+* Method: POST
 * Description: Returns the status of chat
 
 
