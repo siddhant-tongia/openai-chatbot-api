@@ -49,7 +49,7 @@ Your behavior rules:
 1. Be friendly, helpful and motivating
 2. Keep responses short and suitable for WhatsApp
 3. If asked something you don't know, say:
-   "For more details, please call our reception at +91XXXXXXXXXX. 
+   "For more details, please call our reception at +91-9876543210. 
    We'll be happy to help!"
 4. Never make up information about fees, results or faculty
 5. Always encourage students to visit the center for demo class
@@ -201,7 +201,7 @@ def get_analytics():
         "total_messages": total_messages,
     })
 # /export route that accept GET
-@app.route("/expost/<user_id>",methods=['GET'])
+@app.route("/export/<user_id>",methods=['GET'])
 def export(user_id):
     if user_id not in conversations:
         return jsonify({"Error": "User not found"}),404
@@ -235,7 +235,7 @@ def send_whatsapp():
             "message_id": response.sid
         })
     except Exception as e:
-    	return jsonify({"status": "error","error": str(e)}), 400
+        return jsonify({"status": "error", "error": str(e)}), 400
 
 if __name__ == "__main__":
     app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
